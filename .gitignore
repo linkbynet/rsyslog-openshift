@@ -1,0 +1,3 @@
+# Local docker-compose configuration
+.env
+docker-compose.override.yml
