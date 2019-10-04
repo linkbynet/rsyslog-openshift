@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM centos:7
 ARG USER_ID=2000
 # Rsyslog is more up to date on Centos that on Debian.
 # In version 8.33.0 we can get som env variable in configuration
