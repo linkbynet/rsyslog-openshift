@@ -8,7 +8,7 @@ EXPOSE 5514/tcp 5514/udp
 
 # Install utilities
 RUN yum update -y && \
-    yum install -y wget && \
+    yum install -y wget telnet && \
     wget -qO /etc/yum.repos.d/rsyslog.repo http://rpms.adiscon.com/v8-stable/rsyslog.repo && \
     yum install -y rsyslog
 
