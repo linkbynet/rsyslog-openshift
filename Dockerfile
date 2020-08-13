@@ -10,7 +10,7 @@ EXPOSE 5514/tcp 5514/udp
 RUN yum update -y && \
     yum install -y wget telnet && \
     wget -qO /etc/yum.repos.d/rsyslog.repo http://rpms.adiscon.com/v8-stable/rsyslog.repo && \
-    yum install rsyslog-gnutls -y && \
+    yum install rsyslog rsyslog-gnutls -y && \
     yum install gnutls gnutls-utils -y
 RUN rm -f /etc/rsyslog.d/*.conf
 COPY rsyslog.conf /etc/
