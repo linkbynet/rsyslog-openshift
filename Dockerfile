@@ -1,4 +1,4 @@
-FROM centos:7@sha256:e4ca2ed0202e76be184e75fb26d14bf974193579039d5573fb2348664deef76e
+FROM centos:7@sha256:0f4ec88e21daf75124b8a9e5ca03c37a5e937e0e108a255d890492430789b60e
 ARG USER_ID=2000
 # Rsyslog is more up to date on Centos that on Debian.
 # In version 8.33.0 we can get som env variable in configuration
