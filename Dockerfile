@@ -6,9 +6,10 @@ ARG USER_ID=2000
 EXPOSE 5514/tcp 5514/udp
 ADD http://rpms.adiscon.com/v8-stable/rsyslog.repo /etc/yum.repos.d/rsyslog.repo 
 # Install utilities
-RUN yum update -y && \
-    yum install -y rsyslog-gnutls telnet 
-RUN rm -f /etc/rsyslog.d/*.conf
+# hadolint ignore=DL3033
+RUN yum install -y rsyslog-gnutls telnet \
+    && yum clean all \
+    && rm -f /etc/rsyslog.d/*.conf
 COPY rsyslog.conf /etc/
 COPY conf.d/ /etc/rsyslog.d/
 USER ${USER_ID}
